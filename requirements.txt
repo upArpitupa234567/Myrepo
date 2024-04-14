@@ -1,21 +1,49 @@
-dill==0.3.5.1
-dnspython==2.2.1
-fastapi==0.78.0
-httptools==0.5.0
-imblearn==0.0
-mypy-boto3-s3==1.24.76
-pip-chill==1.0.1
-pymongo==4.2.0
-python-dotenv==0.21.0
-types-s3transfer==0.6.0.post4
-uvicorn==0.18.3
-watchfiles==0.17.0
-websockets==10.3
-wincertstore==0.2
-xgboost==1.6.2
-pandas
-PyYAML
-numpy
-scikit-learn
-apache-airflow
--e .
+# dill==0.3.5.1
+# dnspython==2.2.1
+# fastapi==0.78.0
+# httptools==0.5.0
+# imblearn==0.0
+# mypy-boto3-s3==1.24.76
+# pip-chill==1.0.1
+# pymongo==4.2.0
+# python-dotenv==0.21.0
+# types-s3transfer==0.6.0.post4
+# uvicorn==0.18.3
+# watchfiles==0.17.0
+# websockets==10.3
+# wincertstore==0.2
+# xgboost==1.6.2
+# pandas
+# PyYAML
+# numpy
+# scikit-learn
+# apache-airflow
+# -e .
+
+# Upgrade specific packages with versions
+pip install dill  # Latest stable version (consider migrating to dill>=0.3.6)
+pip install fastapi==0.82.0
+pip install httptools==0.5.4
+pip install pymongo==4.3.2
+pip install types-s3transfer==0.6.1
+pip install uvicorn==0.19.0
+pip install xgboost==1.7.2
+
+# Upgrade packages to their latest versions
+pip install --upgrade dnspython
+pip install --upgrade mypy-boto3-s3
+pip install --upgrade pip-chill
+pip install --upgrade python-dotenv
+pip install --upgrade watchfiles
+pip install --upgrade websockets
+pip install --upgrade wincertstore  # Consider upgrading if necessary
+
+# Install pandas, PyYAML, numpy, scikit-learn, and apache-airflow (check latest versions)
+pip install pandas
+pip install PyYAML
+pip install numpy
+pip install scikit-learn
+pip install apache-airflow
+
+# Maintain editable mode for your local project
+-e .  # . means point to correct directory
